@@ -34,6 +34,7 @@ header{
 }
 header .logo img{
     width: 75px;
+    filter: saturate(50%);
 }
 header nav{
     display: flex;
