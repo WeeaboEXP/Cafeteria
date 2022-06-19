@@ -43,16 +43,16 @@ header nav{
 header nav a{
     text-decoration: none;
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 20px;
     color: #FFF;
     transition: .4s ease-in-out;
-    margin: 0px 10px;
+    margin: 0px 14px;
     position: relative;
 }
 header nav a::before{
     content: "";
     position: absolute;
-    top: 8px;
+    top: 12px;
     left: -8px;
     background: var(--main-color);
     width: 5px;
@@ -118,10 +118,10 @@ header nav a:hover{
     transition: 1s ease-in-out;
 }
 .home-content h1{
-    font-size: 3.5rem;
+    font-size: 4.5rem;
 }
 .home-content p{
-    font-size: 14px;
+    font-size: 20px;
     color: #f9f9f9;
 }
 .home-content .home-links{
@@ -718,4 +718,24 @@ header nav a:hover{
 ::-webkit-scrollbar-thumb{
     background: rgb(233, 187, 102);
     border-radius: 15;
+}
+
+.loader-container{
+    position: fixed;
+    top:0; left: 0;
+    height:100%;
+    width: 100%;
+    z-index: 10000;
+    background:#000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-container.active{
+    display: none;
+}
+
+.loader-container img{
+    height:10rem;
 }

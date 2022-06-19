@@ -5,8 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre nós</title>
+    <link rel="icon" href="pic/logo.png" />
+    <link rel="stylesheet" href="css/sobre.css">
 </head>
 <body>
-    
+    <header>
+        <a href="index.html" class="logo">
+            <img src="pic/logo.png" alt="" width="60px" height="60px">
+        </a>
+        <div class="main-menu-wrapper">
+            <ul class="main-menu">
+                <li><a href="index.html" >HOME</a></li>
+                <li><a href="menu/produtos.html" >PRODUTOS</a></li>
+                <li><a href="menu/bebidas/chasquentes.html">CAFÉS</a></li>
+                <li><a href="#"class="active">SOBRE</a></li>
+                <li><a href="http://www.etecdesapopemba.com.br">ETEC</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2 class="name">Ana Mello</h2>
+            <h3 class="buy">Analista</h3>
+            <div class="circle"></div>
+            <img src="pic/ana.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Lucas Delmondes</h2>
+            <h3 class="buy">Codificador</h3>
+            <div class="circle"></div>
+            <img src="pic/lucas.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Andressa Lustro</h2>
+            <h3 class="buy">Designer</h3>
+            <div class="circle"></div>
+            <img src="pic/andressa.png" width="320px" class="product">
+        </div>
+    </div>
+    <script src="js/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".box"), {
+		max: 25,
+		speed: 400
+	});
+    </script>
 </body>
 </html>
