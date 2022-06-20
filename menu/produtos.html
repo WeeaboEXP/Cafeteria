@@ -30,12 +30,40 @@
                 <li><a href="http://www.etecdesapopemba.com.br">ETEC</a></li>
             </ul>
         </div>
-        <ul class="user-menu">
-            <li><a href="#"><i class='bx bx-cart'></i></a></li>
-            <li><a href="#"><i class='bx bx-user'></i></a></li>
-            <li><a href="#"><i class='bx bx-search'></i></a></li>
-        </ul>
+        <div class="user-menu" class="navbar">
+            <nav>
+                <ul id='MenuItems'>
+                    <li class="cart"><a href="#"><i class='bx bx-cart'></i></a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;"><i class='bx bx-user'></i>⠀Entrar</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Entrar</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Registrar</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='Insira E-mail' required >
+		    <input type='password'class='input-field'placeholder='Insira Senha' required>
+		    <input type='checkbox'class='check-box'><span>Lembrar senha</span>
+		    <button type='submit'class='submit-btn'>Entrar</button>
+		 </form>
+		 <form id='register' class='input-group-register'>
+		     <input type='text'class='input-field'placeholder='Primeiro nome' required>
+		     <input type='text'class='input-field'placeholder='Último nome ' required>
+		     <input type='email'class='input-field'placeholder='Seu E-mail' required>
+		     <input type='password'class='input-field'placeholder='Sua Senha' required>
+		     <input type='password'class='input-field'placeholder='Confirmar Senha'  required>
+		     <input type='checkbox'class='check-box'><span>Li e concordo com os Termos</span>
+                    <button type='submit'class='submit-btn'>Registrar</button>
+            
+	         </form>
+            </div>
+        </div>
     <!-- end header -->
 
     <!-- hero slide -->
@@ -615,7 +643,35 @@
     </div>
 
     <!-- app js -->
-    <script src="../js/app.js"></script>
+    <script src="../js/app.js"></script> 
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+            
+        }
+    </script>
 
 </body>
 

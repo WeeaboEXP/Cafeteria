@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-*
-{
+*{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-body
-{
+body{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,19 +14,16 @@ body
     background-size: cover;
     background-position: center center;
 }
-
-a {
+a{
     font-weight: 500;
     text-decoration: none;
     color: unset;
     display: inline-block;
 }
-
-ul {
+ul{
     list-style-type: none;
 }
-
-header {
+header{
     height: 100px;
     position: fixed;
     left: 0;
@@ -42,8 +37,7 @@ header {
     z-index: 99;
     transition: height 0.3s ease 0s, background-color 0.3s ease 0s;
 }
-
-header.shrink {
+header.shrink{
     height: 80px;
     background-color: #111;
 }
@@ -51,8 +45,7 @@ header.shrink {
 .logo{
     filter: saturate(50%);
 }
-
-.main-menu-wrapper {
+.main-menu-wrapper{
     position: absolute;
     inset: 0;
     display: flex;
@@ -60,32 +53,28 @@ header.shrink {
     justify-content: center;
     pointer-events: none;
 }
-
-.main-menu {
+.main-menu{
     display: flex;
     pointer-events: visible;
 }
 
-.main-menu > li > a {
+.main-menu > li > a{
     text-transform: capitalize;
     font-size: 1.5rem;
     color: #bbbbbb;
 }
 
-.main-menu > li > a.active {
+.main-menu > li > a.active{
     color: rgb(233, 187, 102);
 }
 
 .main-menu > li ~ li {
     margin-left: 84px;
 }
-
 .main-menu > li > a:hover{
     color: rgb(233, 187, 102);
 }
-
-.container
-{
+.container{
     position: relative;
     display: flex;
     justify-content: center;
@@ -94,18 +83,17 @@ header.shrink {
     width: 1800px;
     transform-style: preserve-3d;
 }
-.container .box
-{
+.container .box{
+	box-shadow: 0 0 20px 9px #b1b1b170;
     position: relative;
     width: 500px;
     height: 650px;
     margin: 40px;
-    background: #232323;
+    background: linear-gradient(#232323, #111);
     border-radius: 60px;
     transform-style: preserve-3d;
 }
-.container .box::before
-{
+.container .box::before{
     content: 'TE AMO';
     position: absolute;
     top: 20px;
@@ -117,8 +105,7 @@ header.shrink {
     opacity: 0;
     transition: 0.5s;
 }
-.container .box::after
-{
+.container .box::after{
     content: 'ISRAEL';
     position: absolute;
     bottom: 20px;
@@ -131,12 +118,10 @@ header.shrink {
     transition: 0.5s;
 }
 .container .box:hover::before,
-.container .box:hover::after
-{
+.container .box:hover::after{
     opacity: 0.04;
 }
-.container .box .name
-{
+.container .box .name{
     font-size: 2rem;
     position: absolute;
     top: 0;
@@ -150,13 +135,11 @@ header.shrink {
     opacity: 0;
     z-index: 10;
 }
-.container .box:hover .name
-{
+.container .box:hover .name{
     top: 40px;
     opacity: 1;
 }
-.container .box .buy
-{
+.container .box .buy{
     font-size: 1.5rem;
     position: absolute;
     bottom: 0;
@@ -172,13 +155,11 @@ header.shrink {
     opacity: 0;
     z-index: 10;
 }
-.container .box:hover .buy
-{
+.container .box:hover .buy{
     bottom: 30px;
     opacity: 1;
 }
-.container .box .circle
-{
+.container .box .circle{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -192,8 +173,11 @@ header.shrink {
     opacity: 1;
     transform: translate3d(-50%,-50%,50px);
 }
-.container .box .product
-{
+.container .box:hover .circle{
+    width: 380px;
+    height: 380px;
+}
+.container .box .product{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -204,23 +188,18 @@ header.shrink {
     transform-style: preserve-3d;
     transform: translate3d(-50%,-50%,50px);
 }
-.container .box:hover .product
-{
+.container .box:hover .product{
     transform: translate3d(-50%,-50%,100px);
 }
-
 .container .box:nth-child(1) .circle,
-.container .box:nth-child(1) .buy
-{
+.container .box:nth-child(1) .buy{
     background: rgb(48, 158, 202);
 }
 .container .box:nth-child(2) .circle,
-.container .box:nth-child(2) .buy
-{
+.container .box:nth-child(2) .buy{
     background: rgb(47, 100, 42);
 }
 .container .box:nth-child(3) .circle,
-.container .box:nth-child(3) .buy
-{
+.container .box:nth-child(3) .buy{
     background: rgb(145, 67, 44);
 }
