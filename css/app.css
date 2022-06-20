@@ -33,17 +33,6 @@ body {
     font-family: MyriadProCondensed, sans-serif;
     overflow-x: hidden;
 }
-
-a {
-    text-decoration: none;
-    color: unset;
-    display: inline-block;
-}
-
-ul {
-    list-style-type: none;
-}
-
 img {
     max-width: 100%;
 }
